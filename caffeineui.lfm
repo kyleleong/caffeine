@@ -1,13 +1,14 @@
 object Form1: TForm1
   Left = 726
-  Height = 120
+  Height = 150
   Top = 579
-  Width = 408
+  Width = 510
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Caffeine'
-  ClientHeight = 120
-  ClientWidth = 408
+  ClientHeight = 150
+  ClientWidth = 510
+  DesignTimePPI = 120
   Icon.Data = {
     7E04000000000100010010100000010020006804000016000000280000001000
     0000200000000100200000000000000400006400000064000000000000000000
@@ -52,12 +53,13 @@ object Form1: TForm1
   OnShow = FormShow
   OnWindowStateChange = FormWindowStateChange
   Position = poScreenCenter
-  LCLVersion = '2.0.6.0'
+  LCLVersion = '2.0.8.0'
   object ButtonPanelConfirm: TButtonPanel
-    Left = 6
-    Height = 34
-    Top = 80
-    Width = 396
+    Left = 8
+    Height = 38
+    Top = 104
+    Width = 494
+    BorderSpacing.Around = 8
     OKButton.Name = 'OKButton'
     OKButton.Caption = '&Save Changes'
     OKButton.DefaultCaption = False
@@ -77,10 +79,10 @@ object Form1: TForm1
     ShowButtons = [pbOK, pbCancel, pbHelp]
   end
   object CheckGroupSettings: TCheckGroup
-    Left = 8
-    Height = 64
-    Top = 8
-    Width = 394
+    Left = 10
+    Height = 80
+    Top = 10
+    Width = 492
     AutoFill = True
     Caption = 'Settings'
     ChildSizing.LeftRightSpacing = 6
@@ -91,12 +93,13 @@ object Form1: TForm1
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 44
-    ClientWidth = 390
+    ClientHeight = 55
+    ClientWidth = 488
     Items.Strings = (
       'Prevent Display from Sleeping'
     )
     OnItemClick = CheckGroupSettingsItemClick
+    ParentFont = False
     TabOrder = 1
     Data = {
       0100000002
@@ -148,12 +151,12 @@ object Form1: TForm1
     }
     Visible = True
     OnClick = TrayIconCaffeineClick
-    left = 368
-    top = 16
+    left = 460
+    top = 20
   end
   object PopupMenuTrayIcon: TPopupMenu
-    left = 328
-    top = 16
+    left = 410
+    top = 20
     object MenuItemSettings: TMenuItem
       Caption = '&Settings'
       OnClick = MenuItemSettingsClick
@@ -162,5 +165,10 @@ object Form1: TForm1
       Caption = '&Exit'
       OnClick = MenuItemExitClick
     end
+  end
+  object UniqueInstance1: TUniqueInstance
+    Enabled = True
+    left = 360
+    top = 20
   end
 end

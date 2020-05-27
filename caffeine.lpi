@@ -19,8 +19,8 @@
     </General>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
-      <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
+      <RevisionNr Value="1"/>
       <StringTable CompanyName="Kyle Leong" FileDescription="Prevent your computer from going to sleep." InternalName="Caffeine" LegalCopyright="Kyle Leong" ProductName="Caffeine"/>
     </VersionInfo>
     <BuildModes Count="3">
@@ -109,10 +109,13 @@
       <FormatVersion Value="2"/>
       <Modes Count="0"/>
     </RunParams>
-    <RequiredPackages Count="1">
+    <RequiredPackages Count="2">
       <Item1>
-        <PackageName Value="LCL"/>
+        <PackageName Value="uniqueinstance_package"/>
       </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
     </RequiredPackages>
     <Units Count="3">
       <Unit0>

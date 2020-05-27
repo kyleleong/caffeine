@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, ButtonPanel,
-  Menus, StdCtrls, VersionSupport, windows;
+  Menus, StdCtrls, UniqueInstance, VersionSupport, windows;
 
 type
 
@@ -19,6 +19,7 @@ type
     MenuItemExit: TMenuItem;
     PopupMenuTrayIcon: TPopupMenu;
     TrayIconCaffeine: TTrayIcon;
+    UniqueInstance1: TUniqueInstance;
     procedure CancelButtonClick(Sender: TObject);
     procedure CheckGroupSettingsItemClick(Sender: TObject; Index: integer);
     procedure CloseButtonClick(Sender: TObject);
